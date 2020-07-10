@@ -1,0 +1,14 @@
+[
+    {
+        "name": "CNBC",
+        "apiUrl": "https://www.cnbc.com"
+    },
+    {
+        "name": "Yahoo Finance",
+        "apiUrl": "https://finance.yahoo.com"
+    },
+    {
+        "name": "Seeking Alpha",
+        "apiUrl": "https://www.seekingalpha.com"
+    }
+]

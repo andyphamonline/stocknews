@@ -1,0 +1,69 @@
+TO DO LIST:
+- plan out architecture
+- learn React-Redux
+- read React testing: https://reactjs.org/docs/testing.html
+- start coding
+    - https://create-react-app.dev/docs/adding-typescript/
+    - https://www.typescriptlang.org/docs/handbook/react-&-webpack.html
+    - ESlint:
+        npm install eslint-plugin-react-hooks --save-dev
+        // Your ESLint configuration
+        {
+            "plugins": [
+                // ...
+                "react-hooks"
+            ],
+            "rules": {
+                // ...
+                "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+                "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
+            }
+        }
+
+FUNCTIONALITY:
+- Sign up / Log in
+    - Oauth Gmail
+    - Password
+    - FirstName
+    - LastName
+    - Email
+    - Problem: session token?
+- TickerBoard: Dow, S&P, Nasdaq, Brent, Crude, Gold, Silver
+- Search bar
+    - Make API call when user types
+- Multiple Watchlists
+    - Default Watchlist: market (Dow, S&P, Nasdaq, Brent, Crude, Gold, Silver)
+    - Add Watchlist
+    - Delete Watchlist
+- NewsSource
+    - Default NewsSource: Yahoo Finance
+    - Add NewsSource
+    - Delete NewsSource
+- NewsFeed
+    - Sort by date
+    - Load 10 news
+    - Click More to load the next 10 news
+    - Sort by NewsSource (next launch)
+- Route
+    - https://www.stockews.com
+    - /user/
+        - post /user/signup/
+        - post /user/login/
+    - /watchlists/
+        - post /watchlists/create
+        - get /watchlists/id
+
+Backend: route, database, CRUD, authentication
+Frontend: API, UI, sorting
+
+Technology: MERN, Jest, enzyme, ESLint, Webpack, React-redux, Typescript
+
+Version: Github
+
+To do system: Github project board (https://docs.github.com/en/github/managing-your-work-on-github/creating-a-project-board)
+
+CI/CD: Github action: run test
+
+Documentation system: docs folder
+
+Docker

@@ -1,0 +1,51 @@
+[
+    {
+        "firstName": "Andy",
+        "lastName": "Pham",
+        "email": "andypham@yahoo.com",
+        "userName": "andypham",
+        "password": "password",
+        "sources": [
+            {
+                "name": "Yahoo Finance",
+                "apiUrl": "https://finance.yahoo.com"
+            },
+            {
+                "name": "CNBC",
+                "apiUrl": "https://www.cnbc.com"
+            }
+        ],
+        "allSources": [
+            "news01", "news02", "news03", "news04", "news05", "news06"
+        ],
+        "watchList": [
+            {
+                "title": "Oil & Gas",
+                "stocks": ["CLR", "XOM"]
+            }
+        ]
+    },
+    {
+        "firstName": "Alex",
+        "lastName": "Mac",
+        "email": "alexmac@yahoo.com",
+        "userName": "alexmac",
+        "password": "password",
+        "newsSource": [
+            {
+                "name": "Seeking Alpha",
+                "apiUrl": "https://www.seekingalpha.com"
+            },
+            {
+                "name": "CNBC",
+                "apiUrl": "https://www.cnbc.com"
+            }
+        ],
+        "watchList": [
+            {
+                "title": "FANG",
+                "stock": ["AMZN", "FB"]
+            }
+        ]
+    }
+]
