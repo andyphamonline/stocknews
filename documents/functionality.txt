@@ -1,25 +1,3 @@
-TO DO LIST:
-- plan out architecture
-- learn React-Redux
-- read React testing: https://reactjs.org/docs/testing.html
-- start coding
-    - https://create-react-app.dev/docs/adding-typescript/
-    - https://www.typescriptlang.org/docs/handbook/react-&-webpack.html
-    - ESlint:
-        npm install eslint-plugin-react-hooks --save-dev
-        // Your ESLint configuration
-        {
-            "plugins": [
-                // ...
-                "react-hooks"
-            ],
-            "rules": {
-                // ...
-                "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
-                "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
-            }
-        }
-
 FUNCTIONALITY:
 - Sign up / Log in
     - Oauth Gmail
@@ -52,6 +30,26 @@ FUNCTIONALITY:
     - /watchlists/
         - post /watchlists/create
         - get /watchlists/id
+
+TO DO LIST:
+- read React testing: https://reactjs.org/docs/testing.html
+- start coding
+    - https://create-react-app.dev/docs/adding-typescript/
+    - https://www.typescriptlang.org/docs/handbook/react-&-webpack.html
+    - ESlint:
+        npm install eslint-plugin-react-hooks --save-dev
+        // Your ESLint configuration
+        {
+            "plugins": [
+                // ...
+                "react-hooks"
+            ],
+            "rules": {
+                // ...
+                "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+                "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
+            }
+        }
 
 Backend: route, database, CRUD, authentication
 Frontend: API, UI, sorting
