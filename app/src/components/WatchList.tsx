@@ -1,10 +1,9 @@
-import React, { Fragment } from "react";
-import styled from "styled-components";
+import React from "react"
 
 export default function WatchList() {
-	return (
-		<Fragment>
-			<h1>WatchList</h1>
-		</Fragment>
-	);
+  return (
+    <>
+      <h1>WatchList</h1>
+    </>
+  )
 }

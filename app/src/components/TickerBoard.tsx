@@ -1,10 +1,9 @@
-import React, { Fragment } from "react";
-import styled from "styled-components";
+import React from "react"
 
 export default function TickerBoard() {
-	return (
-		<Fragment>
-			<h1>TickerBoard</h1>
-		</Fragment>
-	);
+  return (
+    <>
+      <h1>TickerBoard</h1>
+    </>
+  )
 }

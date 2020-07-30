@@ -1,12 +1,19 @@
 {
   "extends": [
     "airbnb",
-    "prettier/react",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "prettier/react"
   ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
+    }
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
     }
   },
   "env": {
@@ -25,6 +32,7 @@
     ],
     "semi": ["error", "never"],
     "sort-imports": ["off"],
+    "import/extensions": ["error", "never"],
     "import/prefer-default-export": "off",
     "import/no-default-export": "warn",
     "fp/no-delete": "error",
