@@ -48,7 +48,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "webpack",
-    "test": "jest"
+      "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
