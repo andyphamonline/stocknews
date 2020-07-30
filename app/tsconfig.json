@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "outDir": "./build",
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
@@ -16,10 +17,14 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "jsx": "react"
   },
   "include": [
-    "src"
+    "src/**/*.ts?"
+  ],
+  "exclude": [
+    "node_modules",
+      "./src/**/*.test.*",
+    "./src/**/.#*.test.*"
   ]
 }
