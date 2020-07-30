@@ -1,0 +1,57 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier/react",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "plugins": ["react", "prettier", "fp"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".jsx", ".tsx"]
+      }
+    ],
+    "semi": ["error", "never"],
+    "sort-imports": ["off"],
+    "import/prefer-default-export": "off",
+    "import/no-default-export": "warn",
+    "fp/no-delete": "error",
+    "fp/no-let": "error",
+    "fp/no-mutating-assign": "error",
+    "fp/no-mutating-methods": "error",
+    "fp/no-mutation": "error"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx", "**/*.d.ts"],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": "./tsconfig.json",
+        "ecmaFeatures": {
+          "jsx": true
+        }
+      },
+      "rules": {
+        "prettier/prettier": [
+          "error",
+          {
+              "semi": false,
+            "parser": "typescript"
+          }
+        ]
+      }
+    }
+  ]
+}
