@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "@svgr/webpack": "4.3.3",
-    "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "@types/jest": "^24.9.1",
@@ -47,7 +46,7 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "webpack-dev-server",
     "build": "webpack",
     "test": "jest"
   },
@@ -67,6 +66,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.2",
     "@types/styled-components": "^5.1.1",
     "jest": "^26.1.0",
     "jest-watch-typeahead": "^0.6.0",
@@ -88,14 +88,16 @@
       "!src/**/*.d.ts"
     ],
     "setupFiles": [
-      "react-app-polyfill/jsdom"
+        "react-app-polyfill/jsdom"
     ],
+      "setupFilesAfterEnv": [
+        "./jest.setup.ts"
+      ],
     "testMatch": [
       "<rootDir>/src/**/*.test.{js,jsx,ts,tsx}"
     ],
     "testEnvironment": "jest-environment-jsdom-fourteen",
     "transform": {
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^.+\\.tsx?$": "ts-jest"
     },
     "modulePaths": [],
