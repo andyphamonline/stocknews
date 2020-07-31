@@ -5,15 +5,19 @@ import TickerBoard from "./components/TickerBoard";
 import WatchList from "./components/WatchList";
 import NewsFeed from "./components/NewsFeed";
 
+const AppContainer = styled.div`
+    padding: 0 20px;
+`;
+
 function App() {
-	return (
-		<div className="App">
-			<Header />
-			<TickerBoard />
-			<WatchList />
-			<NewsFeed />
-		</div>
-	);
+    return (
+        <AppContainer>
+            <Header />
+            <TickerBoard />
+            <WatchList />
+            <NewsFeed />
+        </AppContainer>
+    );
 }
 
 export default App;
