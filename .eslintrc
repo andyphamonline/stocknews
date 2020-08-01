@@ -30,6 +30,12 @@
         "extensions": [".jsx", ".tsx"]
       }
     ],
+    "prettier/prettier": [
+        "error",
+        {
+            "semi": false
+        }
+    ],
     "semi": ["error", "never"],
     "sort-imports": ["off"],
     "import/extensions": ["error", "never"],
