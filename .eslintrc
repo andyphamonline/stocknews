@@ -22,7 +22,7 @@
     "browser": true,
     "jest": true
   },
-  "plugins": ["react", "prettier", "fp"],
+  "plugins": ["react", "prettier", "fp", "@typescript-eslint"],
   "rules": {
     "react/jsx-filename-extension": [
       "error",
@@ -45,7 +45,10 @@
     "fp/no-let": "error",
     "fp/no-mutating-assign": "error",
     "fp/no-mutating-methods": "error",
-    "fp/no-mutation": "error"
+    "fp/no-mutation": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"]
+
   },
   "overrides": [
     {
