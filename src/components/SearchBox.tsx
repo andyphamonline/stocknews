@@ -1,5 +1,5 @@
-import React, { useState, FormEvent } from "react"
-import styled from "styled-components"
+import React, { useState, FormEvent } from 'react'
+import styled from 'styled-components'
 
 const SearchBoxContainer = styled.div`
   padding: 0 20px;
@@ -10,11 +10,11 @@ const SearchBoxContainer = styled.div`
 `
 
 export default function SearchBox() {
-  const [value, setValue] = useState("")
+  const [value, setValue] = useState('')
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    console.log("submit")
+    console.log('submit')
   }
 
   return (

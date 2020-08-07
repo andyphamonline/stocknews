@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import SearchBox from "./SearchBox"
-import logo from "../logo.jpg"
+import React from 'react'
+import styled from 'styled-components'
+import SearchBox from './SearchBox'
+import logo from '../logo.jpg'
 
 const HeaderContainer = styled.div`
   border: 1px solid black;
