@@ -1,6 +1,7 @@
-import React from "react"
-import styled from "styled-components"
-import logo from "../logo.jpg"
+import React from 'react'
+import styled from 'styled-components'
+import SearchBox from './SearchBox'
+import logo from '../logo.jpg'
 
 const HeaderContainer = styled.div`
   border: 1px solid black;
@@ -25,14 +26,6 @@ const HeaderContainer = styled.div`
   .heading {
     text-align: center;
   }
-
-  .searchBox {
-    padding: 0 20px;
-  }
-
-  .searchBox input {
-    width: 100%;
-  }
 `
 
 export default function Header() {
@@ -50,9 +43,7 @@ export default function Header() {
           <div>Andy</div>
         </div>
       </div>
-      <div className="searchBox">
-        <input type="text" placeholder="Search a stock symbol" />
-      </div>
+      <SearchBox />
     </HeaderContainer>
   )
 }
