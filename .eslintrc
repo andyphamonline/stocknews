@@ -30,13 +30,7 @@
         "extensions": [".jsx", ".tsx"]
       }
     ],
-    "prettier/prettier": [
-        "error",
-        {
-            "semi": false
-        }
-    ],
-    "semi": ["error", "never"],
+    "semi": ["error", "always"],
     "sort-imports": ["off"],
     "import/extensions": ["error", "never"],
     "import/prefer-default-export": "off",
@@ -64,7 +58,6 @@
         "prettier/prettier": [
           "error",
           {
-              "semi": false,
             "parser": "typescript"
           }
         ]
