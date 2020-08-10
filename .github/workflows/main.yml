@@ -13,6 +13,9 @@ jobs:
     - name: Install dependencies
       run: yarn install
 
+    - name: Lint
+      run: yarn lint
+
     # Runs a set of commands using the runners shell
     - name: run tests
       run: yarn test
