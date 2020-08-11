@@ -1,4 +1,5 @@
 # stocknews
+![Build Status](https://github.com/theking9985/stocknews/workflows/CI/badge.svg)
 
 ## Contributing
 
