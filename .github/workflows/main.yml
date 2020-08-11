@@ -34,5 +34,5 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - run: eco ${{ needs.build.outputs.lint_results }}
+      - run: echo ${{ needs.build.outputs.lint_results }}
 
