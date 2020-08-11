@@ -18,18 +18,11 @@ jobs:
 
     - name: Lint
       id: lint
-      run: |
-        yarn lint | tee lint_results
-        echo "::set-output name=results::$(cat lint_results)"
-
-    - name: Test
-      run: echo $EVENT
-      env:
-        COMMENTS_URL: ${{ github.event.pull_request.comments_url }}
+      run: yarn --silent lint 
 
     # Runs a set of commands using the runners shell
-    - name: Run tests
-      run: yarn test
+    - name: Test
+      run: yarn --silent test
   lint_results:
     runs-on: ubuntu-latest
     needs: build
