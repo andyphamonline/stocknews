@@ -17,7 +17,9 @@ jobs:
     #   run: yarn lint
 
     - name: Test
-      run: cat $GITHUB_EVENT_PATH
+      run: echo $EVENT
+      env:
+        EVENT: ${{ github.event.pull_request }}
 
     # Runs a set of commands using the runners shell
     # - name: Run tests
