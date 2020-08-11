@@ -1,2 +1,2 @@
 // TO DO: need to replace this
-export const YahooFinace = 'yahoo finance'
+export const YahooFinace = 'yahoo finance';
