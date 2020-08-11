@@ -16,6 +16,9 @@ jobs:
     - name: Lint
       run: yarn lint
 
+    - name: Test
+      run: echo ${{github.event.pull_request.comments_url}}
+
     # Runs a set of commands using the runners shell
-    - name: run tests
+    - name: Run tests
       run: yarn test
