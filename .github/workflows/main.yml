@@ -19,7 +19,7 @@ jobs:
     - name: Test
       run: echo $EVENT
       env:
-        EVENT: ${{ github.event.pull_request }}
+        EVENT: ${{ github.event.pull_request.comments_url }}
 
     # Runs a set of commands using the runners shell
     # - name: Run tests
