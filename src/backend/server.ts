@@ -12,7 +12,7 @@ app.get('*', (req: any, res: any): void => {
   res.sendFile(HTML_FILE);
 });
 
-const PORT = 8080
+const PORT = 8080;
 
 app.listen(PORT, () => {
   console.log(`App listening to ${PORT}....`);
