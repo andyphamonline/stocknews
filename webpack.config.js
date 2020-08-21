@@ -1,19 +1,19 @@
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
-module.exports = {
+const clientConfig = {
   // "production" | "development" | "none"
   // Chosen mode tells webpack to use its built-in optimizations accordingly.
   mode: "development",
-  entry: "./src/index.tsx",
+  target: "web",
+  entry: "./src/frontend/index.tsx",
   output: {
-    publicPath: "dist",
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "index.js",
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "public/index.html",
+      template: "src/frontend/html/index.html",
     }),
   ],
   module: {
@@ -42,3 +42,28 @@ module.exports = {
   },
   devtool: "inline-source-map",
 }
+
+const serverConfig = {
+  mode: "development",
+  target: "node",
+  entry: "./src/backend/server.ts",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "server.js",
+  },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: [/node_modules/],
+      },
+    ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js", "jsx"],
+  },
+  devtool: "inline-source-map",
+}
+
+module.exports = [serverConfig, clientConfig]

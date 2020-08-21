@@ -4,7 +4,8 @@
 ## Contributing
 
 - **Language** - Typescript
-- **Front End**- React
+- **Front End** - React
+- **Web Server** - Express
 - **Testing** - Jest
 - **Linting** - eslint, prettier, we extend the [Airbnb style guide](https://github.com/airbnb/javascript) 
 - **Compiling** - Webpack, Typescript
@@ -36,6 +37,10 @@ Runs the test suite **and** output a coverage report
 
 Builds the app for production to the `dist` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+#### `npm run build:watch`
+
+Same as `build` but watch for changes
 
 #### `npm run lint`
 
