@@ -1,5 +1,6 @@
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const CopyPlugin = require ('copy-webpack-plugin')
 
 const clientConfig = {
   // "production" | "development" | "none"
@@ -13,8 +14,15 @@ const clientConfig = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "src/frontend/html/index.html",
+      template: "!!html-loader!src/frontend/html/index.html",
+      favicon: "src/frontend/html/favicon.ico",
+      manifest: "src/frontend/html/manifest.json",
     }),
+    new CopyPlugin({
+      patterns: [
+        {from: "src/frontend/html/*", flatten: true}
+      ]
+    })
   ],
   module: {
     rules: [
@@ -22,6 +30,10 @@ const clientConfig = {
         test: /\.tsx?$/,
         use: "ts-loader",
         exclude: [/node_modules/],
+      },
+      {
+        test: /\.html$/,
+        loader: "html-loader",
       },
       {
         test: /\.css$/,
