@@ -13,16 +13,16 @@ const clientConfig = {
     filename: "index.js",
   },
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        {from: "src/frontend/html/*", flatten: true, globOptions: {ignore: ["**/index.html"]}}
+      ]
+    }),
     new HtmlWebpackPlugin({
-      template: "!!html-loader!src/frontend/html/index.html",
+      template: "src/frontend/html/index.html",
       favicon: "src/frontend/html/favicon.ico",
       manifest: "src/frontend/html/manifest.json",
     }),
-    new CopyPlugin({
-      patterns: [
-        {from: "src/frontend/html/*", flatten: true}
-      ]
-    })
   ],
   module: {
     rules: [
