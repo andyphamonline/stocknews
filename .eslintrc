@@ -30,7 +30,7 @@
         "extensions": [".jsx", ".tsx"]
       }
     ],
-    "semi": ["error", "always"],
+    "semi": ["error", "never"],
     "sort-imports": ["off"],
     "import/extensions": ["error", "never"],
     "import/prefer-default-export": "off",
