@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-export default function NewsFeed() {
+export const NewsFeed = () => {
   return (
     <>
       <h1>NewsFeed</h1>
     </>
-  );
+  )
 }

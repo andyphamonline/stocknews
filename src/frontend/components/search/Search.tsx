@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from 'react'
+import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import styled from 'styled-components'
 import { searchWordSubmitted } from './searchSlice'
@@ -20,7 +20,7 @@ const SearchContainer = styled.div`
   }
 `
 
-export default function Search() {
+export const Search = () => {
   const [value, setValue] = useState('')
   const dispatch = useDispatch()
   const disabled: boolean = !value.length
