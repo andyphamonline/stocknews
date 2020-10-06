@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
-import SearchBox from './SearchBox'
-import logo from '../logo.jpg'
+import React from 'react';
+import styled from 'styled-components';
+import Search from './search/Search';
+import logo from '../logo.jpg';
 
 const HeaderContainer = styled.div`
   border: 1px solid black;
@@ -26,7 +26,7 @@ const HeaderContainer = styled.div`
   .heading {
     text-align: center;
   }
-`
+`;
 
 export default function Header() {
   return (
@@ -43,7 +43,7 @@ export default function Header() {
           <div>Andy</div>
         </div>
       </div>
-      <SearchBox />
+      <Search />
     </HeaderContainer>
-  )
+  );
 }
