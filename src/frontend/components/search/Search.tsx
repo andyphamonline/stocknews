@@ -27,7 +27,8 @@ export const Search = () => {
 
   const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
-    dispatch(searchWordSubmitted({ value }))
+    // dispatch(searchWordSubmitted({ value }))
+    dispatch({ type: 'STOCK_FETCH_REQUESTED', payload: value })
   }
 
   return (
