@@ -25,7 +25,7 @@ export const Search = () => {
   const dispatch = useDispatch()
   const disabled: boolean = !value.length
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.SyntheticEvent) => {
     e.preventDefault()
     dispatch(searchWordSubmitted({ value }))
   }
