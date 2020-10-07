@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import SearchBox from './SearchBox'
+import { Search } from './search/Search'
 import logo from '../logo.jpg'
 
 const HeaderContainer = styled.div`
@@ -28,7 +28,7 @@ const HeaderContainer = styled.div`
   }
 `
 
-export default function Header() {
+export const Header = () => {
   return (
     <HeaderContainer>
       <div className="header">
@@ -43,7 +43,7 @@ export default function Header() {
           <div>Andy</div>
         </div>
       </div>
-      <SearchBox />
+      <Search />
     </HeaderContainer>
   )
 }

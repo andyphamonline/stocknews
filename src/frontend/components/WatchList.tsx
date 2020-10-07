@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function WatchList() {
+export const WatchList = () => {
   return (
     <>
       <h1>WatchList</h1>

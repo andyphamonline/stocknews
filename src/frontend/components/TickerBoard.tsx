@@ -6,7 +6,7 @@ const TickerBoardContainer = styled.div`
   border: 1px solid black;
 `
 
-export default function TickerBoard() {
+export const TickerBoard = () => {
   return (
     <TickerBoardContainer>
       <h1>TickerBoard</h1>
