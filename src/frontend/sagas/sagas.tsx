@@ -29,9 +29,10 @@ import { call, put, takeEvery } from 'redux-saga/effects'
 // }
 
 // fetch single stock's news from Yahoo Finance Low Latency API
-function fetchNews() {
+function fetchNews(args: any[]): any {
   fetch(
-    'https://yahoo-finance-low-latency.p.rapidapi.com/v2/finance/news?symbols=AAPL',
+    'https://yahoo-finance-low-latency.p.rapidapi.com/v2/finance/news?symbols=' +
+      args,
     {
       method: 'GET',
       headers: {
@@ -49,6 +50,7 @@ function fetchNews() {
     })
     .then((response) => {
       console.log(response)
+      return response
     })
     .catch((err) => {
       console.log(err)
@@ -57,8 +59,8 @@ function fetchNews() {
 
 function* fetchStock(action: any) {
   try {
-    const stock = yield call(fetchNews)
-    yield put({ type: 'STOCK_FETCH_SUCCEEDED', stock: stock })
+    const stock = yield call(fetchNews, action.payload)
+    // yield put({ type: 'STOCK_FETCH_SUCCEEDED', stock: stock })
   } catch (e) {
     yield put({ type: 'STOCK_FETCH-FAILED', message: e.message })
   }
