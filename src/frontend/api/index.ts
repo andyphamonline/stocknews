@@ -1,1 +1,1 @@
-import './yahooFinance'
+import './yahooFinanceSlice'

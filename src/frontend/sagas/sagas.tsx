@@ -29,8 +29,37 @@ import { call, put, takeEvery } from 'redux-saga/effects'
 // }
 
 // fetch single stock's news from Yahoo Finance Low Latency API
-function fetchNews(args: any[]): any {
-  fetch(
+// function fetchNews(args: any[]): any {
+//   fetch(
+//     'https://yahoo-finance-low-latency.p.rapidapi.com/v2/finance/news?symbols=' +
+//       args,
+//     {
+//       method: 'GET',
+//       headers: {
+//         'x-rapidapi-host': 'yahoo-finance-low-latency.p.rapidapi.com',
+//         'x-rapidapi-key': 'b29663f123msh278a72b44c7a2d0p10d798jsnd4cce00c1a75',
+//       },
+//     },
+//   )
+//     .then((response) => {
+//       if (response.status === 200) return response.json()
+//       else
+//         throw new Error(
+//           'Something went wrong with Yahoo Finance low latency API',
+//         )
+//     })
+//     .then((response) => {
+//       console.log('2nd then: ', response.Content.result)
+//       return response.Content.result
+//     })
+//     .catch((err) => {
+//       console.log(err)
+//     })
+// }
+
+// TO DO: need to handle error from API call
+const fetchNews = async (args: any[]): Promise<string> => {
+  let response = await fetch(
     'https://yahoo-finance-low-latency.p.rapidapi.com/v2/finance/news?symbols=' +
       args,
     {
@@ -41,26 +70,14 @@ function fetchNews(args: any[]): any {
       },
     },
   )
-    .then((response) => {
-      if (response.status === 200) return response.json()
-      else
-        throw new Error(
-          'Something went wrong with Yahoo Finance low latency API',
-        )
-    })
-    .then((response) => {
-      console.log(response)
-      return response
-    })
-    .catch((err) => {
-      console.log(err)
-    })
+
+  return response.json()
 }
 
 function* fetchStock(action: any) {
   try {
     const stock = yield call(fetchNews, action.payload)
-    // yield put({ type: 'STOCK_FETCH_SUCCEEDED', stock: stock })
+    yield put({ type: 'yahooFinance/STOCK_FETCH_SUCCEEDED', stock: stock })
   } catch (e) {
     yield put({ type: 'STOCK_FETCH-FAILED', message: e.message })
   }
