@@ -77,9 +77,9 @@ const fetchNews = async (args: any[]): Promise<string> => {
 function* fetchStock(action: any) {
   try {
     const stock = yield call(fetchNews, action.payload)
-    yield put({ type: 'yahooFinance/STOCK_FETCH_SUCCEEDED', stock: stock })
+    yield put({ type: 'yahooFinance/STOCK_FETCH_SUCCEEDED', payload: stock })
   } catch (e) {
-    yield put({ type: 'STOCK_FETCH-FAILED', message: e.message })
+    yield put({ type: 'yahooFinance/STOCK_FETCH_FAILED', payload: e.message })
   }
 }
 
