@@ -25,7 +25,7 @@ export const Search = () => {
   const dispatch = useDispatch()
   const disabled: boolean = !value.length
 
-  const handleSubmit = (e: React.SyntheticEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>): void => {
     e.preventDefault()
     dispatch(searchWordSubmitted({ value }))
   }
@@ -37,7 +37,7 @@ export const Search = () => {
           value={value}
           type="text"
           placeholder="Search a stock symbol"
-          onChange={(e) => setValue(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) : void => setValue(e.target.value)}
         />
         <button type="button" disabled={disabled} onClick={handleSubmit}>
           Search
