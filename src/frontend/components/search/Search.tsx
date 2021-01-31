@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import styled from 'styled-components'
 import { searchWordSubmitted } from './searchSlice'
+import { fetchNews } from '../../api/yahooFinance'
 
 const SearchContainer = styled.div`
   padding: 0 20px;
@@ -25,9 +26,12 @@ export const Search = () => {
   const dispatch = useDispatch()
   const disabled: boolean = !value.length
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>): void => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>): Promise<void> => {
     e.preventDefault()
-    dispatch(searchWordSubmitted({ value }))
+
+    let news = await fetchNews(value)
+     
+    // dispatch(searchWordSubmitted({ value }))
   }
 
   return (
