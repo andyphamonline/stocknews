@@ -1,13 +1,13 @@
 export const fetchNews = async (stock: string): Promise<object> => {
-  console.log(process.env.REACT_APP_YAHOO_FINANCE_API_KEY)
-
+  const api: string = process.env.REACT_APP_YAHOO_FINANCE_API_KEY || ''
+  
   let res: object = await fetch(
     'https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete?region=US&q=' + stock,
     {
       method: 'GET',
       headers: {
         'x-rapidapi-host': 'apidojo-yahoo-finance-v1.p.rapidapi.com',
-        'x-rapidapi-key': process.env.REACT_APP_YAHOO_FINANCE_API_KEY,
+        'x-rapidapi-key': api,
       }
     }
   )

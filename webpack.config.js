@@ -1,6 +1,7 @@
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const CopyPlugin = require ('copy-webpack-plugin')
+const Dotenv = require("dotenv-webpack")
 
 const clientConfig = {
   // "production" | "development" | "none"
@@ -23,6 +24,7 @@ const clientConfig = {
       favicon: "src/frontend/html/favicon.ico",
       manifest: "src/frontend/html/manifest.json",
     }),
+    new Dotenv()
   ],
   module: {
     rules: [
