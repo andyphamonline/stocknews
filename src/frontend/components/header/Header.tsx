@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import styled from 'styled-components'
 import Search from '../search/Search'
 import logo from '../../logo.jpg'
@@ -36,7 +36,7 @@ const HeaderWrapper = styled.div`
   }
 `
 
-export default function Header() {
+export default function Header(): ReactElement {
   return (
     <HeaderWrapper>
       <div className='header'>
