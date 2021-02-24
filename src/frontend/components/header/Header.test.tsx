@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme'
 import { title } from '../../lib/index'
 import logo from '../../logo.jpg'
 
-describe('Header testing', () => {
+describe('Header tests', () => {
   let wrapper: ShallowWrapper
 
   beforeEach(() => {
