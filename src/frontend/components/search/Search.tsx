@@ -20,10 +20,12 @@ const SearchWrapper = styled.div`
 
 export default function Search() {
   const [value, setValue] = useState('')
-  let [news, setNews] = useState('')
-  const isDisabled: boolean = value === '' ? true : false
+  const [news, setNews] = useState('')
+  const isDisabled: boolean = value === ''
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>) : Promise<void> => {
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>,
+  ): Promise<void> => {
     e.preventDefault()
 
     const newsString = await fetchNews(value)
@@ -34,12 +36,17 @@ export default function Search() {
   return (
     <SearchWrapper>
       <form onSubmit={handleSubmit}>
-        <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)} placeholder={searchPlaceholder} />
-        <button onClick={handleSubmit} disabled={isDisabled}>Submit</button>
+        <input
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setValue(e.target.value)
+          }
+          placeholder={searchPlaceholder}
+        />
+        <button onClick={handleSubmit} disabled={isDisabled}>
+          Submit
+        </button>
       </form>
-      <div>
-        {news}
-      </div>
+      <div>{news}</div>
     </SearchWrapper>
   )
 }

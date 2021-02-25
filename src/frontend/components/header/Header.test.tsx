@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
-import Header from './Header'
 import { shallow, ShallowWrapper } from 'enzyme'
+import Header from './Header'
 import { title } from '../../lib/index'
 import logo from '../../logo.jpg'
 
@@ -16,7 +16,7 @@ describe('Header tests', () => {
     expect(header.text()).toBe(title)
   })
 
-  it ('render logo correctly', () => {
+  it('render logo correctly', () => {
     const img = wrapper.find('.logo img')
     expect(img.prop('src')).toBe(logo)
   })

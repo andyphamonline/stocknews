@@ -2,7 +2,15 @@ import React, { ReactElement } from 'react'
 import styled from 'styled-components'
 import Search from '../search/Search'
 import logo from '../../logo.jpg'
-import { colorBlack, colorGreen, colorRed, getGutter, logoAlt, slogan, title } from '../../lib/index'
+import {
+  colorBlack,
+  colorGreen,
+  colorRed,
+  getGutter,
+  logoAlt,
+  slogan,
+  title,
+} from '../../lib/index'
 
 const HeaderWrapper = styled.div`
   padding: ${getGutter(2)}px;
@@ -28,29 +36,28 @@ const HeaderWrapper = styled.div`
   }
 
   .heading h1 {
-    color: ${colorGreen}
+    color: ${colorGreen};
   }
 
   .heading h2 {
-    color: ${colorRed}
+    color: ${colorRed};
   }
 `
 
 export default function Header(): ReactElement {
   return (
     <HeaderWrapper>
-      <div className='header'>
-        <div className='logo'>
+      <div className="header">
+        <div className="logo">
           <img src={logo} alt={logoAlt} />
         </div>
-        <div className='heading'>
+        <div className="heading">
           <h1>{title}</h1>
           <h2>{slogan}</h2>
         </div>
-        <div className='signin'>Andy</div>
+        <div className="signin">Andy</div>
       </div>
       <Search />
     </HeaderWrapper>
-
   )
 }
