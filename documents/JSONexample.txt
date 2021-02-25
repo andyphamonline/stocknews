@@ -1,0 +1,160 @@
+{
+  "explains": [],
+  "count": 15,
+  "quotes": [
+    {
+      "exchange": "NMS",
+      "shortname": "Apple Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "AAPL",
+      "index": "quotes",
+      "score": 2367580,
+      "typeDisp": "Equity",
+      "longname": "Apple Inc.",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "NYQ",
+      "shortname": "Apple Hospitality REIT, Inc.",
+      "quoteType": "EQUITY",
+      "symbol": "APLE",
+      "index": "quotes",
+      "score": 29550,
+      "typeDisp": "Equity",
+      "longname": "Apple Hospitality REIT, Inc.",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "MEX",
+      "shortname": "APPLE INC",
+      "quoteType": "EQUITY",
+      "symbol": "AAPL.MX",
+      "index": "quotes",
+      "score": 21504,
+      "typeDisp": "Equity",
+      "longname": "Apple Inc.",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "FRA",
+      "shortname": "APPLE INC.",
+      "quoteType": "EQUITY",
+      "symbol": "APC.F",
+      "index": "quotes",
+      "score": 21042,
+      "typeDisp": "Equity",
+      "longname": "Apple Inc.",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "PNK",
+      "shortname": "APPLE RUSH COMPANY INC",
+      "quoteType": "EQUITY",
+      "symbol": "APRU",
+      "index": "quotes",
+      "score": 20926,
+      "typeDisp": "Equity",
+      "longname": "Apple Rush Company, Inc.",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "GER",
+      "shortname": "APPLE INC.",
+      "quoteType": "EQUITY",
+      "symbol": "APC.DE",
+      "index": "quotes",
+      "score": 20571,
+      "typeDisp": "Equity",
+      "longname": "Apple Inc.",
+      "isYahooFinance": true
+    },
+    {
+      "exchange": "PNK",
+      "shortname": "GOLDEN APPLE OIL & GAS INC",
+      "quoteType": "EQUITY",
+      "symbol": "GAPJ",
+      "index": "quotes",
+      "score": 20197,
+      "typeDisp": "Equity",
+      "longname": "Golden Apple Oil & Gas Inc.",
+      "isYahooFinance": true
+    }
+  ],
+  "news": [
+    {
+      "uuid": "c5619149-ae09-3a0d-8608-7d8af54697f3",
+      "title": "Apple Hospitality REIT Reports Results of Operations for Fourth Quarter and Full Year 2020",
+      "publisher": "Business Wire",
+      "link": "https://finance.yahoo.com/news/apple-hospitality-reit-reports-results-211500723.html",
+      "providerPublishTime": 1614114900,
+      "type": "STORY"
+    },
+    {
+      "uuid": "6456598a-2968-3f66-9b5a-c728a020c2d6",
+      "title": "Apple’s Cook Discusses M&A, App Store Scrutiny at Annual Meeting",
+      "publisher": "Bloomberg",
+      "link": "https://finance.yahoo.com/news/apple-cook-discusses-m-app-183404511.html",
+      "providerPublishTime": 1614105244,
+      "type": "STORY"
+    },
+    {
+      "uuid": "abeae88a-5680-3e1b-9d97-acd8ae1f12ae",
+      "title": "Apple plans to increase dividend, approves executive compensation - CNBC",
+      "publisher": "Reuters",
+      "link": "https://finance.yahoo.com/news/apple-plans-increase-dividend-cnbc-183850815.html",
+      "providerPublishTime": 1614105530,
+      "type": "STORY"
+    },
+    {
+      "uuid": "483f2991-19f3-3929-8905-a93e97e1d6d8",
+      "title": "Apple Will Unveil Two New MacBook Pro Laptop Models This Year, Analyst Says",
+      "publisher": "Barrons.com",
+      "link": "https://finance.yahoo.com/m/483f2991-19f3-3929-8905-a93e97e1d6d8/apple-will-unveil-two-new.html",
+      "providerPublishTime": 1614093000,
+      "type": "STORY"
+    },
+    {
+      "uuid": "12896fa5-1995-3a34-8d4d-389cc6505cf9",
+      "title": "AMC: A Ray of Light or a False Dawn?",
+      "publisher": "TipRanks",
+      "link": "https://finance.yahoo.com/news/amc-ray-light-false-dawn-000705640.html",
+      "providerPublishTime": 1614125225,
+      "type": "STORY"
+    },
+    {
+      "uuid": "25687c74-656a-3bdf-8ff2-82ce3d8e0d1e",
+      "title": "Emerson Firm Announces Investigation Regarding Alleged Improper Sale of Private Health Data by Flo Health, Inc.",
+      "publisher": "GlobeNewswire",
+      "link": "https://finance.yahoo.com/news/emerson-firm-announces-investigation-regarding-003700067.html",
+      "providerPublishTime": 1614127020,
+      "type": "STORY"
+    },
+    {
+      "uuid": "e1c02517-0a0a-46b6-8a25-13ed4eab8eda",
+      "title": "Apple’s biggest mistake was not buying Netflix: Dan Ives",
+      "publisher": "Yahoo Finance",
+      "link": "https://finance.yahoo.com/news/apple-mistake-not-buying-netflix-dan-ives-153542204.html",
+      "providerPublishTime": 1614094542,
+      "type": "STORY"
+    },
+    {
+      "uuid": "9b57d129-3aad-342b-a8d5-558f6b2245e8",
+      "title": "Apple's rumored mixed reality headset puts spotlight on VR",
+      "publisher": "Yahoo Finance Video",
+      "link": "https://finance.yahoo.com/video/apples-rumored-mixed-reality-headset-220557892.html",
+      "providerPublishTime": 1614117957,
+      "type": "VIDEO"
+    }
+  ],
+  "nav": [],
+  "lists": [],
+  "researchReports": [],
+  "totalTime": 79,
+  "timeTakenForQuotes": 451,
+  "timeTakenForNews": 600,
+  "timeTakenForAlgowatchlist": 400,
+  "timeTakenForPredefinedScreener": 400,
+  "timeTakenForCrunchbase": 0,
+  "timeTakenForNav": 400,
+  "timeTakenForResearchReports": 0
+}

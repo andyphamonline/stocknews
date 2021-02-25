@@ -1,19 +1,16 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
 import styled from 'styled-components'
-import { searchWordSubmitted } from './searchSlice'
+import { searchPlaceholder } from '../../lib/index'
 import { fetchNews } from '../../api/yahooFinance'
 
-const SearchContainer = styled.div`
-  padding: 0 20px;
-
+const SearchWrapper = styled.div`
   form {
     display: flex;
+    justify-content: space-between;
   }
 
   input {
-    width: 75%;
-    margin-right: 5%;
+    width: 70%;
   }
 
   button {
@@ -21,32 +18,35 @@ const SearchContainer = styled.div`
   }
 `
 
-export const Search = () => {
+export default function Search() {
   const [value, setValue] = useState('')
-  const dispatch = useDispatch()
-  const disabled: boolean = !value.length
+  const [news, setNews] = useState('')
+  const isDisabled: boolean = value === ''
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>): Promise<void> => {
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>,
+  ): Promise<void> => {
     e.preventDefault()
 
-    let news = await fetchNews(value)
-     
-    // dispatch(searchWordSubmitted({ value }))
+    const newsString = await fetchNews(value)
+
+    setNews(JSON.stringify(newsString))
   }
 
   return (
-    <SearchContainer>
+    <SearchWrapper>
       <form onSubmit={handleSubmit}>
         <input
-          value={value}
-          type="text"
-          placeholder="Search a stock symbol"
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) : void => setValue(e.target.value)}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setValue(e.target.value)
+          }
+          placeholder={searchPlaceholder}
         />
-        <button type="button" disabled={disabled} onClick={handleSubmit}>
-          Search
+        <button onClick={handleSubmit} disabled={isDisabled}>
+          Submit
         </button>
       </form>
-    </SearchContainer>
+      <div>{news}</div>
+    </SearchWrapper>
   )
 }

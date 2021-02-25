@@ -1,29 +1,26 @@
-export const fetchNews = async (stock: string): Promise<object> => {
+export const fetchNews = async (stock: string): Promise<string> => {
   const api: string = process.env.REACT_APP_YAHOO_FINANCE_API_KEY || ''
-  
-  let res: object = await fetch(
-    'https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete?region=US&q=' + stock,
+
+  const result: string = await fetch(
+    `https://apidojo-yahoo-finance-v1.p.rapidapi.com/auto-complete?region=US&q=${stock}`,
     {
       method: 'GET',
       headers: {
         'x-rapidapi-host': 'apidojo-yahoo-finance-v1.p.rapidapi.com',
         'x-rapidapi-key': api,
-      }
-    }
+      },
+    },
   )
-    .then(response => {
-      if (response.status === 200) {
-        return response.json()
-      } else {
-        throw new Error('Something wrong with API Dojo Yahoo Finance v1 API')
-      }
+    .then((res) => {
+      if (res.status === 200) return res.json()
+      throw new Error('Something wrong with API Dojo Yahoo Finance v1 API')
     })
-    .then(response => {
-      return response
+    .then((res) => {
+      return res
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err)
     })
 
-  return res
+  return result
 }
